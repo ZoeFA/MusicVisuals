@@ -4,6 +4,7 @@ import ddf.minim.Minim;
 import ie.tudublin.Visual;
 import ie.tudublin.VisualException;
 import processing.core.PApplet;
+import java.awt.Frame;
 
 public class OurVisual extends Visual{
 
@@ -15,7 +16,12 @@ public class OurVisual extends Visual{
   AudioPlayer ap;
   Minim minim;
 
-  int mode = 0;
+  int mode = 1;
+  
+  boolean lastPressed = false;
+  boolean showLyrics = false;
+
+  Frame myFrame = new Frame();
 
   public void settings(){
 
@@ -26,11 +32,15 @@ public class OurVisual extends Visual{
 
   public void setup(){
 
-    //startMinim();
+    // startMinim();
+    // loadAudio("boysaliar.mp3");
     minim = new Minim(this);
     // Call loadAudio to load an audio file to process 
     ap = minim.loadFile("boysaliar.mp3");
     ap.play();
+
+    myFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
+    myFrame.setUndecorated(true);
     
     //ab = ap.mix;
     colorMode(HSB);
@@ -47,50 +57,78 @@ public class OurVisual extends Visual{
 
 
   public void keyPressed() {
-		if (key >= '1' && key <= '9') {
-			mode = key - '1';
-		}
-		if (keyCode == ' ') {
-            if (ap.isPlaying()) {
-                ap.pause();
-            } else {
-                ap.rewind();
-                ap.play();
-            }
-        }
+		
+    if (key == ' '){
+
+      getAudioPlayer().cue(0);
+      getAudioPlayer().play();
+    }
 	}
 
-
-  // public void keyPressed()
-  //   {
-  //       if (key == ' ') //bind to spacebar
-  //       {
-  //           getAudioPlayer().cue(0);
-  //           getAudioPlayer().play();
-
-  //           cube.draw();
-  //       }
-  //   }
-
-
-
   public void draw(){
-    background(0);
+    background(255);
 
     switch (mode) {
 
       case 1:
+        partOne();
+        break;
 
-      background(0);
+      // case 2:
+      //   partTwo();
+      //   break; 
 
-      yasc.render();
-      break;
+      // case 3:
+      //   partThree();
+      //   break;
+
+      // case 4:
+      //   partFour();
+      //   break;
+      
+      default:
+        break;
     }
 
+    keyPressingLogic();
   }
-  
 
 
+  void keyPressingLogic(){
 
+    if(keyPressed){
 
+      switch(key){
+
+        case '1':
+          mode = 1;
+        
+        case '2':
+          mode = 2;
+
+        case '3':
+          mode = 3;
+
+        case '4':
+          mode = 4;
+
+        default:
+          break;
+      }
+      lastPressed = true;
+    }
+    else{
+      lastPressed = false;
+    }
+  }
+
+  void partOne(){
+
+    // catch(VisualException e){
+
+    //   e.printStackTrace();
+    // }
+
+    yasc.render();
+    }
 }

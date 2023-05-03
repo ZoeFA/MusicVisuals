@@ -28,57 +28,57 @@ public class Heart extends Visual{
 			
 	}
 
-  public void settings(){
+  // public void settings(){
 
-    size(1024, 500);
+  //   size(1024, 500);
     
-  }
+  // }
 
-  public void setup(){
-    colorMode(HSB);
-    noCursor();
+  // public void setup(){
+  //   colorMode(HSB);
+  //   noCursor();
     
-    setFrameSize(256);
+  //   setFrameSize(256);
 
-    startMinim();
-    loadAudio("boysaliar.mp3");
-    getAudioPlayer().play();
+  //   startMinim();
+  //   loadAudio("boysaliar.mp3");
+  //   getAudioPlayer().play();
 
   
-    //wf = new WaveForm(this);
-    //abv = new AudioBandsVisual(this);
-    lerpedBuffer = new float[width];
+  //   //wf = new WaveForm(this);
+  //   //abv = new AudioBandsVisual(this);
+  //   lerpedBuffer = new float[width];
 
-    //fft = new FFT(width, 44100);
+  //   //fft = new FFT(width, 44100);
 
-    colorMode(HSB);
-		background(0);
+  //   colorMode(HSB);
+	// 	background(0);
 
-    /*
-		x1 = random(0, width);
-		x2 = random(0, width);
-		y1 = random(0, height);
-		y2 = random(0, height);
+  //   /*
+	// 	x1 = random(0, width);
+	// 	x2 = random(0, width);
+	// 	y1 = random(0, height);
+	// 	y2 = random(0, height);
 
-		float range = 5;
+	// 	float range = 5;
 
-		x1dir = random(-range, range);
-		x2dir = random(-range, range);
-		y1dir = random(-range, range);
-		y2dir = random(-range, range);
+	// 	x1dir = random(-range, range);
+	// 	x2dir = random(-range, range);
+	// 	y1dir = random(-range, range);
+	// 	y2dir = random(-range, range);
 
-		smooth();
-    */
-  }
+	// 	smooth();
+  //   */
+  // }
 
-  public void keyPressed()
-  {
-      if (key == ' ')
-      {
-          getAudioPlayer().cue(0);
-          getAudioPlayer().play();
-      }
-  }
+  // public void keyPressed()
+  // {
+  //     if (key == ' ')
+  //     {
+  //         getAudioPlayer().cue(0);
+  //         getAudioPlayer().play();
+  //     }
+  // }
 
   public void draw(){
     //background(0);

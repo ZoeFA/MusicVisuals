@@ -16,25 +16,25 @@ public class Loops extends PApplet {
 			
 	}
 
-	public void settings() {
-		size(1000, 1000);
-		//fullScreen(SPAN);
-	}
+	// public void settings() {
+	// 	size(1000, 1000);
+	// 	//fullScreen(SPAN);
+	// }
 
-	public void setup() {
-		colorMode(HSB);
-	}
+	// public void setup() {
+	// 	colorMode(HSB);
+	// }
 
-	public void keyPressed() {
+	// public void keyPressed() {
 
-		mode = key - '0';
-		println(mode);
-	}
+	// 	mode = key - '0';
+	// 	println(mode);
+	// }
 
 	float off = 0;
 
 	public void draw() {
-		background(0);
+		
 		fill(255);
 		noStroke();
 

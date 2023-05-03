@@ -56,39 +56,16 @@ public class YASC extends PApplet
 		
 	}
 
-	String s3 = "Hello";
+
 
 	public void setup() {
 		ship = new Ship(width / 2, height / 2, 80, 6, this);
 		ship1 = new Ship(100, 100, 80, 6, this);
 		ship2 = new Ship(200, 200, 80, 6, this); // Initialize ship2
-        ship3 = new Ship(300, 300, 80, 6, this); // Initialize ship3
+    ship3 = new Ship(300, 300, 80, 6, this); // Initialize ship3
 		ship4 = new Ship(400, 400, 80, 6, this); // Initialize ship4
-        ship5 = new Ship(500, 500, 80, 6, this); // Initialize ship5
-			colorMode(HSB);
-
-		String s = "I love Star Trek";
-
-		s += " & 200AD";
-
-		String s1 = s.substring(2, 6);
-
-		println(s.substring(7, 11));
-
-		println(s.indexOf("Trek"));
-
-		println(s.startsWith("Ilove"));
-
-		String ss3 = "Hell";
-		String temp = "o";
-		String s2 = "Hello";
-		
-		String s4 = ss3 + temp;
-
-		println(s4 == s2);
-		println(s4.equals(s2));
-		
-
+		ship5 = new Ship(500, 500, 80, 6, this); // Initialize ship5
+		colorMode(HSB);
 
 		println();
 	}
@@ -101,16 +78,16 @@ public class YASC extends PApplet
 		ship1.render();
 		ship1.move();
 		ship2.render(); // Render ship2
-        ship2.move(); // Move ship2
+		ship2.move(); // Move ship2
 
-        ship3.render(); // Render ship3
-        ship3.move(); // Move ship3
+		ship3.render(); // Render ship3
+		ship3.move(); // Move ship3
  
 		ship4.render(); // Render ship4
-        ship4.move(); // Move ship4
+    ship4.move(); // Move ship4
 
 		ship5.render(); // Render ship5
-        ship5.move(); // Move ship5
+    ship5.move(); // Move ship5
 
 		for(int i = bullets.size() - 1 ; i >= 0 ; i --)
 		{

@@ -26,34 +26,34 @@ public class CubeVisual1 extends Visual
         //fullScreen(P3D, SPAN);
     }
 
-    public void keyPressed()
-    {
-        if (key == ' ')
-        {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
+    // public void keyPressed()
+    // {
+    //     if (key == ' ')
+    //     {
+    //         getAudioPlayer().cue(0);
+    //         getAudioPlayer().play();
             
-        }
-    }
+    //     }
+    // }
 
-    public void setup()
-    {
-        colorMode(HSB);
-        noCursor();
+    // public void setup()
+    // {
+    //     colorMode(HSB);
+    //     noCursor();
         
-        setFrameSize(256);
+    //     setFrameSize(256);
 
-        startMinim();
-        loadAudio("boysaliar.mp3");
+    //     startMinim();
+    //     loadAudio("boysaliar.mp3");
         
-    }
+    // }
 
     float smoothedBoxSize = 0;
 
     public void draw()
     {
         calculateAverageAmplitude();
-        background(0);
+        // background(0);
         noFill();
         lights();
         stroke(map(getSmoothedAmplitude(), 0, 1, 0, 45), 175, 255);
