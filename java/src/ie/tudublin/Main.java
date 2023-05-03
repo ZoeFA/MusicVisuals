@@ -1,8 +1,8 @@
 package ie.tudublin;
 
-// import javax.swing.JFrame;
+import javax.swing.JFrame;
 
-// import c21333116.Confetti;
+import c21333116.Confetti;
 import c21333116.CubeVisual;
 // import c21333116.YASC;
 // import c21333116.CubeVisual1;
@@ -64,14 +64,14 @@ public class Main
 		main.boysaliar();
 
 
-		// //confetti JFrame code
-		// JFrame frame = new JFrame("Confetti");
-		// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// Confetti confetti = new Confetti(800, 600);
-		// frame.getContentPane().add(confetti);
-		// frame.pack();
-		// frame.setVisible(true);
-		// //confetti.run();
+		//confetti JFrame code
+		JFrame frame = new JFrame("Confetti");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Confetti confetti = new Confetti(800, 600);
+		frame.getContentPane().add(confetti);
+		frame.pack();
+		frame.setVisible(true);
+		confetti.run();
 
 		//yasc();
 		//main.endtext();

@@ -13,8 +13,7 @@ public class OurVisual extends Visual{
   CubeVisual1 cube;
   Heart h;
 
-  AudioPlayer ap;
-  Minim minim;
+  
 
   int mode = 1;
   
@@ -25,21 +24,18 @@ public class OurVisual extends Visual{
 
   public void settings(){
 
-    size(1024, 1000);
-    //fullScreen();
+    // size(1024, 1000, P3D);
+    fullScreen(P3D);
 
   }
 
   public void setup(){
 
-    // startMinim();
-    // loadAudio("boysaliar.mp3");
-    minim = new Minim(this);
+    startMinim();
+    loadAudio("boysaliar.mp3");
+    
     // Call loadAudio to load an audio file to process 
-    ap = minim.loadFile("boysaliar.mp3");
-    ap.play();
-
-    myFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        myFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
     myFrame.setUndecorated(true);
     
     //ab = ap.mix;
@@ -55,15 +51,31 @@ public class OurVisual extends Visual{
     yasc = new YASC(this);
   }
 
+  public boolean[] keys = new boolean[1024]; 
 
-  public void keyPressed() {
-		
-    if (key == ' '){
+	public void keyPressed()
+	{
+		keys[keyCode] = true;
 
-      getAudioPlayer().cue(0);
-      getAudioPlayer().play();
+    if (key >= '0' && key <= '9') {
+			mode = key - '0';
+		}
+    if (keyCode == ' ') {
+      if (getAudioPlayer().isPlaying()) {
+        //getAudioPlayer().pause();
+      } else {
+        getAudioPlayer().rewind();
+        getAudioPlayer().play();
+      }
     }
+
 	}
+
+	public void keyReleased()
+	{
+		keys[keyCode] = false;
+	}
+
 
   @Override
   public void draw(){
@@ -91,7 +103,7 @@ public class OurVisual extends Visual{
         break;
     }
 
-    keyPressingLogic();
+    //keyPressingLogic();
   }
 
 
@@ -135,10 +147,7 @@ public class OurVisual extends Visual{
 
   void partTwo(){
 
-    calculateAverageAmplitude();
-    getSmoothedAmplitude();
-    getAmplitude();
-
+    
     cube.render();
 
   }
