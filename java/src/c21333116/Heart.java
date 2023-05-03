@@ -6,8 +6,9 @@ import c21333116.OurVisual;
 import example.WaveForm;
 //import ie.tudublin.*;
 import ie.tudublin.Visual;
+import processing.core.PApplet;
 
-public class Heart extends Visual{
+public class Heart {
   AudioBuffer ab;
   WaveForm wf;
   AudioBandsVisual abv;
@@ -84,30 +85,30 @@ public class Heart extends Visual{
     //background(0);
 
     
-    translate(width/2, height/2);
-    pushMatrix();
-    popMatrix();
+    v.translate(v.width/2, v.height/2);
+    v.pushMatrix();
+    v.popMatrix();
     //noFill();
     //stroke(255);
-    fill(0);
-    beginShape();
-    for (float a = 0; a < TWO_PI; a+= 0.01){
+    v.fill(0);
+    v.beginShape();
+    for (float a = 0; a < v.TWO_PI; a+= 0.01){
       float r = 10;
-      float x = r * 16 * pow(sin(a), 3);
-      float y = -r * (13 * cos(a) - 5 * cos(2 * a) - 2 * cos(3 * a) - cos(4 * a));
-      vertex(x, y);
+      float x = r * 16 * v.pow(v.sin(a), 3);
+      float y = -r * (13 * v.cos(a) - 5 * v.cos(2 * a) - 2 * v.cos(3 * a) - v.cos(4 * a));
+      v.vertex(x, y);
     }
-    endShape();    
+    v.endShape();    
     
     
 
 
     
-    strokeWeight(2);
+    v.strokeWeight(2);
     //stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-		stroke(c, 175, 255);
+		v.stroke(c, 175, 255);
 		c = (c + 1f) % 30;
-		line(x1, y1, x2, y2);
+		v.line(x1, y1, x2, y2);
 
     
 
@@ -116,20 +117,20 @@ public class Heart extends Visual{
 		y1 += y1dir;
 		y2 += y2dir;
 		
-		if (x1 < 0 || x1 > width)
+		if (x1 < 0 || x1 > v.width)
 		{
 			x1dir = - x1dir;
 		}
-		if (y1 < 0 || y1 > height)
+		if (y1 < 0 || y1 > v.height)
 		{
 			y1dir = - y1dir;
 		}
 
-		if (x2 < 0 || x2 > width)
+		if (x2 < 0 || x2 > v.width)
 		{
 			x2dir = - x2dir;
 		}
-		if (y2 < 0 || y2 > height)
+		if (y2 < 0 || y2 > v.height)
 		{
 			y2dir = - y2dir;
 		}
@@ -139,7 +140,7 @@ public class Heart extends Visual{
   
   public void render(){
 
-    float halfH = height / 2;
+    float halfH = v.height / 2;
     //float average = 0;
     //float sum = 0;
     //off += 1;
@@ -147,11 +148,11 @@ public class Heart extends Visual{
     for(int i = 0 ; i < ab.size() ; i ++)
       {
           //float c = map(ab.get(i), -1, 1, 0, 255);
-          float c = map(i, 0, ab.size(), 0, 255);
-          stroke(c, 255, 255);
+          float c = v.map(i, 0, ab.size(), 0, 255);
+          v.stroke(c, 255, 255);
           //stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
           float f = lerpedBuffer[i] * halfH * 4.0f;
-          line(halfH + f, i, halfH - f, i);                    
+          v.line(halfH + f, i, halfH - f, i);                    
       }
     }  
 }

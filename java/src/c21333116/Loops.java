@@ -53,8 +53,6 @@ public class Loops extends PApplet {
 				}
 				off += (mouseY / 50.0f);
 				break;
-			case 1:
-				break;
 			default:
 				break;
 		}

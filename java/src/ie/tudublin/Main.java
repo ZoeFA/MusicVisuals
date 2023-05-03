@@ -1,19 +1,19 @@
 package ie.tudublin;
 
-import javax.swing.JFrame;
+// import javax.swing.JFrame;
 
-import c21333116.Confetti;
+// import c21333116.Confetti;
 import c21333116.CubeVisual;
-import c21333116.YASC;
-import c21333116.CubeVisual1;
-import c21333116.Heart;
-import c21333116.Loops;
+// import c21333116.YASC;
+// import c21333116.CubeVisual1;
+// import c21333116.Heart;
+// import c21333116.Loops;
 import c21333116.OurVisual;
 import example.MyVisual;
-import example.myHeart;
-import example.secondHeart;
-import example.circle;
-import example.twerking;
+// import example.myHeart;
+// import example.secondHeart;
+// import example.circle;
+// import example.twerking;
 
 public class Main
 {	

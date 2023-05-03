@@ -53,30 +53,32 @@ public class Ship {
         forward.x = PApplet.sin(rot);
         forward.y = - PApplet.cos(rot);
 
-        YASC yasc= ((YASC)p);
+        OurVisual ourVisual = (OurVisual) p;
+        YASC yasc = ourVisual.yasc;
         
-        if (yasc.keys[PApplet.LEFT])
+        
+        if (ourVisual.keys[PApplet.LEFT])
         {
             rot -= 0.1f;
         }
 
-        if (yasc.keys[PApplet.RIGHT])
+        if (ourVisual.keys[PApplet.RIGHT])
         {
             rot += 0.1f;
         }
 
-        if (yasc.keys[PApplet.UP])
+        if (ourVisual.keys[PApplet.UP])
         {
             pos.x += forward.x;
             pos.y += forward.y;
         }
 
-        if (yasc.keys[PApplet.DOWN])
+        if (ourVisual.keys[PApplet.DOWN])
         {
             pos.x -= forward.x;
             pos.y -= forward.y;
         }
-        if (yasc.keys[' '])
+        if (ourVisual.keys[' '])
         {
             PVector inFront = PVector.add(pos,
                 PVector.mult(forward, 30)
@@ -84,7 +86,7 @@ public class Ship {
             
             Bullet b = new Bullet(inFront.x, inFront.y, rot, c, p);
 
-            ((YASC)p).bullets.add(b);
+            yasc.bullets.add(b);
         }
     }
 

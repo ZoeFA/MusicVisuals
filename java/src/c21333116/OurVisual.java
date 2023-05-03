@@ -65,8 +65,9 @@ public class OurVisual extends Visual{
     }
 	}
 
+  @Override
   public void draw(){
-    background(255);
+    background(0);
 
     switch (mode) {
 
@@ -74,9 +75,9 @@ public class OurVisual extends Visual{
         partOne();
         break;
 
-      // case 2:
-      //   partTwo();
-      //   break; 
+      case 2:
+        partTwo();
+        break; 
 
       // case 3:
       //   partThree();
@@ -131,4 +132,14 @@ public class OurVisual extends Visual{
 
     yasc.render();
     }
+
+  void partTwo(){
+
+    calculateAverageAmplitude();
+    getSmoothedAmplitude();
+    getAmplitude();
+
+    cube.render();
+
+  }
 }

@@ -6,7 +6,7 @@ import processing.core.PApplet;
 
 import processing.core.PVector;
 
-public class YASC extends PApplet
+public class YASC
 {
 	Ship ship;
 	Ship ship1;
@@ -21,54 +21,23 @@ public class YASC extends PApplet
 	public YASC(OurVisual v)
 	{
 			this.v = v;
-			
+
+			ship = new Ship(v.width / 2, v.height / 2, 80, 6, v);
+			ship1 = new Ship(100, 100, 80, 6, v);
+			ship2 = new Ship(200, 200, 80, 6, v); // Initialize ship2
+			ship3 = new Ship(300, 300, 80, 6, v); // Initialize ship3
+			ship4 = new Ship(400, 400, 80, 6, v); // Initialize ship4
+			ship5 = new Ship(500, 500, 80, 6, v); // Initialize ship5
+			v.colorMode(v.HSB);
+	
+			//v.println();
+			v.println();
 	}
 
 
-	public boolean[] keys = new boolean[1024]; 
 
-	public void keyPressed()
-	{
-		keys[keyCode] = true;
-	}
 
-	public void keyReleased()
-	{
-		keys[keyCode] = false;
-	}
-
-	// Generic
 	public ArrayList<Bullet> bullets = new ArrayList<Bullet>();
-
-
-	public void settings()
-	{
-
-		PVector a = new PVector(10, 10);
-        PVector b = new PVector(20, 20);
-
-        b = a;
-        
-        b.x = 30;
-        b.y = 30;
-
-        println(a);
-		
-	}
-
-
-
-	public void setup() {
-		ship = new Ship(width / 2, height / 2, 80, 6, this);
-		ship1 = new Ship(100, 100, 80, 6, this);
-		ship2 = new Ship(200, 200, 80, 6, this); // Initialize ship2
-    ship3 = new Ship(300, 300, 80, 6, this); // Initialize ship3
-		ship4 = new Ship(400, 400, 80, 6, this); // Initialize ship4
-		ship5 = new Ship(500, 500, 80, 6, this); // Initialize ship5
-		colorMode(HSB);
-
-		println();
-	}
 
 	public void render(){
 		
@@ -97,8 +66,8 @@ public class YASC extends PApplet
 		}
 		
 
-		fill(255);
-		text("Bullets: " + bullets.size(), 50, 50);
+		v.fill(255);
+		v.text("Bullets: " + bullets.size(), 50, 50);
 
 	}
 }

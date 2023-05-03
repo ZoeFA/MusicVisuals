@@ -49,7 +49,8 @@ public class Bullet {
 
         if (pos.x < 0 || pos.x > p.width || pos.y < 0 || pos.y > p.height)
         {
-            ((YASC)p).bullets.remove(this);
+            YASC yasc = ((OurVisual) p).yasc;
+            yasc.bullets.remove(this);
         }
 
 
