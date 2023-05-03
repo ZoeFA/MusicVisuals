@@ -1,11 +1,13 @@
 package example;
 
+//import c21333116.Heart;
 import ie.tudublin.*;
 
 public class MyVisual extends Visual
 {    
     WaveForm wf;
     AudioBandsVisual abv;
+    
 
     public void settings()
     {
@@ -23,14 +25,16 @@ public class MyVisual extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        //loadAudio("heroplanet.mp3");   
+        loadAudio("boysaliar.mp3");   
 
         
         // Call this instead to read audio from the microphone
-        startListening(); 
+        //startListening(); 
         
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
+        //h = new Heart(this);
+
     }
 
     public void keyPressed()
@@ -42,6 +46,10 @@ public class MyVisual extends Visual
         }
     }
 
+    // make a for loop to iterate through an array of stars
+
+    
+    
     public void draw()
     {
         background(0);
@@ -61,5 +69,6 @@ public class MyVisual extends Visual
         calculateAverageAmplitude();        
         wf.render();
         abv.render();
+        //h.render();
     }
 }
