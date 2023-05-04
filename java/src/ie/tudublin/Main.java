@@ -3,17 +3,14 @@ package ie.tudublin;
 import javax.swing.JFrame;
 
 import c21333116.Confetti;
-import c21333116.CubeVisual;
 // import c21333116.YASC;
 // import c21333116.CubeVisual1;
 // import c21333116.Heart;
 // import c21333116.Loops;
 import c21333116.OurVisual;
+import c21333116.myHeart;
+import example.CubeVisual;
 import example.MyVisual;
-// import example.myHeart;
-// import example.secondHeart;
-// import example.circle;
-// import example.twerking;
 
 public class Main
 {	
@@ -37,31 +34,13 @@ public class Main
         processing.core.PApplet.runSketch( a, new OurVisual());		
 	}
 
-	
-	// public void heart()
-	// {
-	// 	String[] a = {"MAIN"};
-  //       processing.core.PApplet.runSketch( a, new Heart());
-	// }
-
-	// public void twerking()
-	// {
-	// 	String[] a = {"MAIN"};
-  //       processing.core.PApplet.runSketch( a, new twerking());		
-	// }
-
-	// public void yasc()
-	// {
-	// 	String[] a = {"MAIN"};
-  //       processing.core.PApplet.runSketch( a, new YASC());		
-	// }
-
 
 	public static void main(String[] args) throws InterruptedException
 	{
 		Main main = new Main();
 
 		main.boysaliar();
+		//main.myheart();
 
 
 		//confetti JFrame code
@@ -73,8 +52,7 @@ public class Main
 		frame.setVisible(true);
 		confetti.run();
 
-		//yasc();
-		//main.endtext();
+		
 	}
 	
 

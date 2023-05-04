@@ -22,9 +22,19 @@ One of our visuals is interactive.
 Pressing key 1 displays out heart-shaped Ships and requires you to use the arrow keys and spacebar, to move and shoot out heart-shaped bullets.
 
 # How it works
+blah
 
 # What I am most proud of in the assignment
+blahblah
 
+
+# Table of Work
+| Student Name | Visual/Code description | How it works |
+|-----------|-----------|-----------|
+|Zoe Fabre-Anderson | Keybind 2: A 3D cube which spins. Inside is a smaller heart, and text which says the title of the song. | It calculates the average amplitude, lerps it and then maps it to the cube. The cube pulses to the amplitude of the song
+|Joanne Umeh | Some more stuff in this column | Text |
+|Shahida Mohammed-Ahmed | Some more stuff in this column | Text |
+|Naomi Togbe | Some more stuff in this column | Text |
 
 
 # Markdown Tutorial
@@ -76,7 +86,7 @@ public void render()
 
 This is an image using a relative URL:
 
-![An image](images/p8.png)
+![An image](data/visual1.png)
 
 This is an image using an absolute URL:
 
@@ -88,11 +98,3 @@ This is a youtube video:
 
 This is a table of who did what visual/code:
 
-
-# Table of Work
-| Student Name | Visual/Code description | How it works |
-|-----------|-----------|-----------|
-|Zoe Fabre-Anderson | Keybind 2: A 3D cube which spins. Inside is a smaller heart, and text which says the title of the song. | It calculates the average amplitude, lerps it and then maps it to the cube. The cube pulses to the amplitude of the song
-|Some stuff | Some more stuff in this column | Text |
-|Some stuff | Some more stuff in this column | Text |
-|Some stuff | Some more stuff in this column | Text |

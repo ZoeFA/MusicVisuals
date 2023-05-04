@@ -6,8 +6,15 @@ import processing.core.PApplet;
 
 import processing.core.PVector;
 
+
+//////////////////////////////
+////JOANNE'S VISUAL KEY 1/////
+//////////////////////////////
+
 public class YASC
 {
+
+	//declare ship variables
 	Ship ship;
 	Ship ship1;
 	Ship ship2;
@@ -55,6 +62,7 @@ public class YASC
 
 	public ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 
+	//draws in the ships, allows them to move
 	public void render(){
 		
 		ship.render();
@@ -92,6 +100,8 @@ public class YASC
 		ship11.render();
 		ship11.move();
 
+
+		//create bullets
 		for(int i = bullets.size() - 1 ; i >= 0 ; i --)
 		{
 			Bullet b = bullets.get(i);

@@ -2,6 +2,8 @@ package c21333116;
 import ddf.minim.AudioBuffer;
 import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
+import ddf.minim.analysis.FFT;
+import ddf.minim.*;
 import ie.tudublin.Visual;
 import ie.tudublin.VisualException;
 import processing.core.PApplet;
@@ -13,7 +15,10 @@ public class OurVisual extends Visual{
 
   CubeVisual1 cube;
 
+  myHeart mh;
+
   AudioBuffer ab;
+  FFT fft;
   
 
   int mode = 1;
@@ -43,6 +48,7 @@ public class OurVisual extends Visual{
     
     yasc = new YASC(this);
     cube = new CubeVisual1(this);
+    mh = new myHeart(this);
     
   }
 
@@ -86,9 +92,9 @@ public class OurVisual extends Visual{
         partTwo();
         break; 
 
-      // case 3:
-      //   partThree();
-      //   break;
+      case 3:
+        partThree();
+        break;
 
       // case 4:
       //   partFour();
@@ -132,10 +138,14 @@ public class OurVisual extends Visual{
 
   void partOne(){
 
-    // catch(VisualException e){
-
-    //   e.printStackTrace();
-    // }
+    // try
+    //   {
+    //       calculateFFT();
+    //   }
+    //   catch(VisualException e)
+    //   {
+    //       e.printStackTrace();
+    //   }
 
     yasc.render();
     }
@@ -144,6 +154,13 @@ public class OurVisual extends Visual{
 
     
     cube.render();
+
+  }
+
+  void partThree(){
+
+    
+    mh.render();
 
   }
 }

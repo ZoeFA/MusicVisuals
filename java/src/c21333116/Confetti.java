@@ -8,6 +8,11 @@ import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+
+////////////////////////////
+////JOANNE'S END VISUAL/////
+////////////////////////////
+
 public class Confetti extends JPanel {
     private static final long serialVersionUID = 1L;
 //array of confetti

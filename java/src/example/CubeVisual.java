@@ -1,4 +1,4 @@
-package c21333116;
+package example;
 
 import ie.tudublin.Visual;
 

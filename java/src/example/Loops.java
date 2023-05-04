@@ -1,5 +1,6 @@
-package c21333116;
+package example;
 
+import c21333116.OurVisual;
 import processing.core.PApplet;
 
 
