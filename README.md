@@ -86,7 +86,7 @@ public void render()
 
 This is an image using a relative URL:
 
-![Visual 1]![visual1](https://user-images.githubusercontent.com/123522743/236204085-2a4d5482-c31d-4d0a-8669-4c157f02e08f.png)
+![visual1](https://user-images.githubusercontent.com/123522743/236204085-2a4d5482-c31d-4d0a-8669-4c157f02e08f.png)
 
 
 This is an image using an absolute URL:
