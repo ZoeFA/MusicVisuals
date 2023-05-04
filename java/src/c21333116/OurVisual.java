@@ -17,7 +17,7 @@ public class OurVisual extends Visual{
   myHeart mh;
   twerking twerk;
   Terrain ter;
- 
+  Planet plan;
 
   AudioBuffer ab;
   FFT fft;
@@ -47,6 +47,7 @@ public class OurVisual extends Visual{
     startMinim();
     loadAudio("boysaliar.mp3");
     
+    // fft = new FFT(PApplet.bufferSize(), player.sampleRate());
     
     myFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
     myFrame.setUndecorated(true);
@@ -131,6 +132,10 @@ public class OurVisual extends Visual{
       case 5:
         partFive();
         break;
+      
+      // case 6:
+      //   partSix();
+      //   break;
 
       default:
         break;
@@ -160,6 +165,9 @@ public class OurVisual extends Visual{
 
         case '5':
           mode = 5;
+
+        // case '6':
+        //   mode = 6;
 
         default:
           break;
@@ -204,4 +212,8 @@ public class OurVisual extends Visual{
     ter.render();
    
   }
+
+  // void partSix(){
+  //   plan.render();
+  // }
 }

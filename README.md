@@ -15,22 +15,20 @@ To play out visualiser: Press debug/run, then using the hot keys 1 - 6 you cans 
 One of our visuals is interactive. 
 Pressing key 1 displays out heart-shaped Ships and requires you to use the arrow keys and spacebar, to move and shoot out heart-shaped bullets.
 
-## How it works
-blah
 
 ## What I am most proud of in the assignment
-blahblah
+
 
 
 # Table of Work
 | Student Name | Visual/Code description | How it works |
 |-----------|-----------|-----------|
 | Zoe Fabre-Anderson | Keybind 2: A 3D cube which spins. Inside is a smaller heart, and text which says the title of the song. | It calculates the average amplitude, lerps it and then maps it to the cube. The cube pulses to the amplitude of the song
-| Joanne Umeh | Keybind 1: YASC Heart-shaped ships and bullets |  |
-| Joanne Umeh | Keybind?: Confetti |  |
-| Shahida Mohammed-Ahmed | Keybind 3: Beating heart with monochrome bars |  |
-| Shahida Mohammed-Ahmed | Keybind?: Twerking person (Ice Spice) |  |
-| Naomi Togbe | Some more stuff in this column | Text |
+| Joanne Umeh | Keybind 1: YASC Heart-shaped ships and bullets | The Yasc java file is a file that a number of red hearts displayed on the screen. These hearts can move clockwise and anti-clockwise. When the space bar is entered the hearts begin to produce mini hearts that can be compared to bullets |
+| Joanne Umeh | Seperate terminal window: Confetti EndScreen | The Confetti java file uses a JFrame to produce mini rectangles that fall vertically on the screen. I used a random colour generator to make it look like confetti. I also added sliding text to the file in order for it to resemble a credit page. |
+| Shahida Mohammed-Ahmed | Keybind 3: Beating heart with monochrome bars | The heart beats (expands) to the amplitude of the song |
+| Shahida Mohammed-Ahmed | Keybind 4: Twerking person (Ice Spice) | The two circles pulsating represent two asscheeks. It is to look like the stick figure is twerking |
+| Naomi Togbe | Keybind 5: Terrain and Planet | A noise map to act as a  moving terrain. A planet shape was to be added. The planet pulsed to the amplitude and rotated.|
 
 
 # Visuals
@@ -38,8 +36,9 @@ blahblah
 
 ![visual1](https://user-images.githubusercontent.com/123522743/236204085-2a4d5482-c31d-4d0a-8669-4c157f02e08f.png)
 
+**Zoe Visual:**
 
-This is a youtube video:
+**Shahida Visuals:**
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+**Naomi Visuals:**
 

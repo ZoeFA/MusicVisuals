@@ -36,7 +36,7 @@ public class Terrain {
 
     public void render() {
 
-      v.background(255, 100, 255f);
+      v.background(0, 0, 255);
       cols = w / scl; // calculates number of columns by dividing width by scale
       rows = h / scl; // calculates number of rows by dividing height by scale
       terrain = new float[cols][rows]; // creates 2d grid using the col and row variables

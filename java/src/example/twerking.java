@@ -78,7 +78,7 @@ public class twerking {
 
             v.fill(255, 165, 0); // Orange fill color
 
-            v.ellipse(centerX, 150, 70, 70);
+            v.ellipse(centerX, 200, 70, 70);
             
 
            
@@ -100,12 +100,12 @@ public class twerking {
             v.fill(255);
             
            
-            
-            v.line(900, 450, 900, 550);
+            //legs
+            v.line(900, 550, 900, 700);
 
             v.fill(255);
 
-            v.line(1000, 450, 1000, 550);
+            v.line(1000, 550, 1000, 700);
             //line(379, 450, 379, 500);
 
             
