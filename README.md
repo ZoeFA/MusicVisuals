@@ -31,58 +31,13 @@ blahblah
 # Table of Work
 | Student Name | Visual/Code description | How it works |
 |-----------|-----------|-----------|
-|Zoe Fabre-Anderson | Keybind 2: A 3D cube which spins. Inside is a smaller heart, and text which says the title of the song. | It calculates the average amplitude, lerps it and then maps it to the cube. The cube pulses to the amplitude of the song
-|Joanne Umeh | Some more stuff in this column | Text |
-|Shahida Mohammed-Ahmed | Some more stuff in this column | Text |
-|Naomi Togbe | Some more stuff in this column | Text |
+| Zoe Fabre-Anderson | Keybind 2: A 3D cube which spins. Inside is a smaller heart, and text which says the title of the song. | It calculates the average amplitude, lerps it and then maps it to the cube. The cube pulses to the amplitude of the song
+| Joanne Umeh | Keybind 1: YASC Heart-shaped ships and bullets |  |
+| Joanne Umeh | Keybind?: Confetti |  |
+| Shahida Mohammed-Ahmed | Keybind 3: Beating heart with monochrome bars |  |
+| Shahida Mohammed-Ahmed | Keybind?: Twerking person (Ice Spice) |  |
+| Naomi Togbe | Some more stuff in this column | Text |
 
-
-# Markdown Tutorial
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
 
 This is an image using a relative URL:
 
