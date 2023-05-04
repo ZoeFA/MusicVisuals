@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 public class Confetti extends JPanel {
     private static final long serialVersionUID = 1L;
+//array of confetti
     private ArrayList<ConfettiShape> shapes = new ArrayList<>();
     private int width;
     private int height;
@@ -19,7 +20,7 @@ public class Confetti extends JPanel {
     private int xText3 = 0;
     private int xText4 = 0;
 
-
+//constructor for confetti object
     public Confetti(int width, int height) {
         this.width = width;
         this.height = height;
@@ -28,12 +29,17 @@ public class Confetti extends JPanel {
         this.setDoubleBuffered(true);
     }
 
+    //adds a conffeti shape to the shapes arraylist
     public void addShape() {
         ConfettiShape shape = new ConfettiShape(rand.nextInt(width), 0, rand.nextInt(10) + 5, rand.nextInt(10) + 5, new Color(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256)));
         shapes.add(shape);
     }
 
+    //updates the position of the shpaes and the text
     public void update() {
+
+        //move the confettiShape objects down the screen
+        //removes them if they are out of bounds
         for (int i = 0; i < shapes.size(); i++) {
             ConfettiShape shape = shapes.get(i);
             shape.update();
@@ -41,6 +47,8 @@ public class Confetti extends JPanel {
                 shapes.remove(i);
             }
         }
+
+        //move text across the screen
         xText1 += 5;
         if (xText1 > width) {
             xText1 = 0;
@@ -59,6 +67,7 @@ public class Confetti extends JPanel {
         }
     }
 
+    //draw the confetti and text onto the screen
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.WHITE);
@@ -72,6 +81,7 @@ public class Confetti extends JPanel {
         }
     }
 
+    //main method to run the program
     public void run() throws InterruptedException {
         while (true) {
             addShape();
@@ -81,6 +91,7 @@ public class Confetti extends JPanel {
         }
     }
 
+    //start
     public static void main(String[] args) throws InterruptedException {
         JFrame frame = new JFrame("Confetti");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,6 +102,7 @@ public class Confetti extends JPanel {
         confetti.run();
     }
 
+    //nested conffeti class
     private class ConfettiShape {
         private int x;
         private int y;

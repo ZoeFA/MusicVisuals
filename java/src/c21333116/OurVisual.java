@@ -10,9 +10,8 @@ import java.awt.Frame;
 public class OurVisual extends Visual{
 
   YASC yasc;
-  Loops loop;
+
   CubeVisual1 cube;
-  Heart h;
 
   AudioBuffer ab;
   
@@ -20,7 +19,6 @@ public class OurVisual extends Visual{
   int mode = 1;
   
   boolean lastPressed = false;
-  boolean showLyrics = false;
 
   Frame myFrame = new Frame();
 
@@ -33,27 +31,22 @@ public class OurVisual extends Visual{
 
   public void setup(){
 
+    // Call loadAudio to load an audio file to process 
     startMinim();
     loadAudio("boysaliar.mp3");
     
-    // Call loadAudio to load an audio file to process 
-        myFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
+    
+    myFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
     myFrame.setUndecorated(true);
     
-    //ab = ap.mix;
     colorMode(HSB);
-
-    //y = height / 2;
-    //smoothedY = y;
-
     
-    loop = new Loops(this);
-    cube = new CubeVisual1(this);
-    h = new Heart(this);
     yasc = new YASC(this);
+    cube = new CubeVisual1(this);
+    
   }
 
-  public boolean[] keys = new boolean[1024]; 
+  public boolean[] keys = new boolean[1024];
 
 	public void keyPressed()
 	{

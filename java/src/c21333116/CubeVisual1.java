@@ -77,6 +77,7 @@ public class CubeVisual1
         v.textAlign(PApplet.CENTER, PApplet.CENTER);
         v.textSize(32);
         
+
         // v.graphics2D.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
         // RenderingHints.VALUE_TEXT_ANTIALIAS_GASP);
 

@@ -14,7 +14,13 @@ public class YASC
 	Ship ship3;
 	Ship ship4;
 	Ship ship5;
-	
+	Ship ship6;
+	Ship ship7;
+	Ship ship8;
+	Ship ship9;
+	Ship ship10;
+	Ship ship11;
+
 	OurVisual v;
 
 
@@ -22,16 +28,26 @@ public class YASC
 	{
 			this.v = v;
 
-			ship = new Ship(v.width / 2, v.height / 2, 80, 6, v);
-			ship1 = new Ship(100, 100, 80, 6, v);
-			ship2 = new Ship(200, 200, 80, 6, v); // Initialize ship2
-			ship3 = new Ship(300, 300, 80, 6, v); // Initialize ship3
-			ship4 = new Ship(400, 400, 80, 6, v); // Initialize ship4
-			ship5 = new Ship(500, 500, 80, 6, v); // Initialize ship5
-			v.colorMode(v.HSB);
+			// ship = new Ship(v.width / 2, v.height / 2, 80, 6, v);
+			//initialize ships
+
+			//ships in a heart shape
+			ship1 = new Ship(1150, 400, 80, 6, v);//right line start
+			ship9 = new Ship(1050, 500, 80, 6, v);//right
+			ship10 = new Ship(950, 600, 80, 6, v);//right
+			ship11 = new Ship(875, 700, 80, 6, v);//right
+			ship2 = new Ship(800, 400, 80, 6, v); //mid point
+			ship3 = new Ship(600, 250, 80, 6, v);//left arc 
+			ship4 = new Ship(400, 400, 80, 6, v); //left line start
+			ship5 = new Ship(500, 500, 80, 6, v); //left
+			ship = new Ship(600, 600, 80, 6, v);//left
+			ship6 = new Ship(700, 700, 80, 6, v);//left
+			ship7 = new Ship(800, 800, 80, 6, v);//left
+			ship8 = new Ship(950, 250, 80, 6, v);//right arc
+			v.colorMode(PApplet.HSB);
 	
 			//v.println();
-			v.println();
+			PApplet.println();
 	}
 
 
@@ -57,6 +73,24 @@ public class YASC
 
 		ship5.render(); // Render ship5
     ship5.move(); // Move ship5
+
+		ship6.render();
+		ship6.move();
+
+		ship7.render();
+		ship7.move();
+
+		ship8.render();
+		ship8.move();
+
+		ship9.render();
+		ship9.move();
+
+		ship10.render();
+		ship10.move();
+
+		ship11.render();
+		ship11.move();
 
 		for(int i = bullets.size() - 1 ; i >= 0 ; i --)
 		{
