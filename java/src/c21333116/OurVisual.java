@@ -80,19 +80,22 @@ public class OurVisual extends Visual{
 
   @Override
   public void draw(){
-    background(0);
+    // background(255);
 
     switch (mode) {
 
       case 1:
+      background(0);
         partOne();
         break;
 
       case 2:
+      background(0);
         partTwo();
         break; 
 
       case 3:
+      background(0);
         partThree();
         break;
 

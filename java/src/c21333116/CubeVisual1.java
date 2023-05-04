@@ -40,7 +40,7 @@ public class CubeVisual1
 
         //cube shape
         v.calculateAverageAmplitude();//
-        // background(0);
+        // v.background(0);
         v.noFill();//empty
         v.lights();
         v.stroke(PApplet.map(v.getSmoothedAmplitude(), 0, 1, 0, 45), 175, 255);

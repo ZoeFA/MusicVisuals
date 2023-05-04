@@ -1,5 +1,7 @@
 package c21333116;
 
+import javax.swing.border.StrokeBorder;
+
 import ie.tudublin.Visual;
 import ie.tudublin.VisualException;
 import processing.core.PApplet;
@@ -28,18 +30,18 @@ public class myHeart {
 
 
 
+
     public void render()
     {
         
-
+        v.background(0);
         v.calculateAverageAmplitude();
         
         v.calculateFrequencyBands();
-       
-        
-        
+            
         int numColumns = v.width / 20;
         for (int i = 0; i < numColumns; i++) {
+            v.stroke(0);
             if (i % 2 == 0) {
                 v.fill(255, 102, 0); // orange color for even columns
             } else {
@@ -54,7 +56,8 @@ public class myHeart {
         heartSize = 20 * heartScale;
 
         v.translate(v.width/2, v.height/2);
-        // v.background(255);
+        
+
         v.beginShape();
         for (float a = 0; a < PApplet.TWO_PI; a += 0.01)
         {
@@ -69,6 +72,7 @@ public class myHeart {
             v.endShape(PApplet.CLOSE);
 
             angle += v.getSmoothedAmplitude() * 0.01;
+           
     }
     
 }
