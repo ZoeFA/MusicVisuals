@@ -1,4 +1,5 @@
 package c21333116;
+import ddf.minim.AudioBuffer;
 import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 import ie.tudublin.Visual;
@@ -13,6 +14,7 @@ public class OurVisual extends Visual{
   CubeVisual1 cube;
   Heart h;
 
+  AudioBuffer ab;
   
 
   int mode = 1;
