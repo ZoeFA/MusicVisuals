@@ -13,6 +13,8 @@ import javax.swing.JPanel;
 ////JOANNE'S END VISUAL/////
 ////////////////////////////
 
+
+
 public class Confetti extends JPanel {
     private static final long serialVersionUID = 1L;
 //array of confetti
@@ -24,6 +26,7 @@ public class Confetti extends JPanel {
     private int xText2 = 0;
     private int xText3 = 0;
     private int xText4 = 0;
+
 
 //constructor for confetti object
     public Confetti(int width, int height) {

@@ -1,10 +1,10 @@
 # Music Visualiser Project
 
 
-Name: Zoe Fabre-Anderson, Shahida Mohammed-Ahmed, Joanne Umeh, Naomi Togbe
+**Name:** Zoe Fabre-Anderson, Shahida Mohammed-Ahmed, Joanne Umeh, Naomi Togbe
 
 
-Student Number: D22125460, C21333116, D22126855, C21495372
+**Student Number:** D22125460, C21333116, D22126855, C21495372
 
 
 # Description of the assignment
@@ -39,13 +39,7 @@ blahblah
 ![visual1](https://user-images.githubusercontent.com/123522743/236204085-2a4d5482-c31d-4d0a-8669-4c157f02e08f.png)
 
 
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
-
 This is a youtube video:
 
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-This is a table of who did what visual/code:
 

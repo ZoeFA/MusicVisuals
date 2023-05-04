@@ -3,6 +3,7 @@ import ddf.minim.AudioBuffer;
 import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 import ddf.minim.analysis.FFT;
+import example.twerking;
 import ddf.minim.*;
 import ie.tudublin.Visual;
 import ie.tudublin.VisualException;
@@ -12,14 +13,16 @@ import java.awt.Frame;
 public class OurVisual extends Visual{
 
   YASC yasc;
-
   CubeVisual1 cube;
-
   myHeart mh;
+  twerking twerk;
+  Terrain ter;
+ 
 
   AudioBuffer ab;
   FFT fft;
   
+  // color bg;
 
   int mode = 1;
   
@@ -30,9 +33,13 @@ public class OurVisual extends Visual{
   public void settings(){
 
     // size(1024, 1000, P3D);
-    fullScreen(P3D);
+    fullScreen(P3D, SPAN);
 
   }
+
+  // void applyColorMode(){
+
+  // }
 
   public void setup(){
 
@@ -44,11 +51,28 @@ public class OurVisual extends Visual{
     myFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
     myFrame.setUndecorated(true);
     
-    colorMode(HSB);
+
+
+    // colorMode(RGB, 255, 100, 100);
+    // colorMode(RGB);
+    // color bg = color(0, 0, 0);
     
     yasc = new YASC(this);
     cube = new CubeVisual1(this);
     mh = new myHeart(this);
+    twerk = new twerking(this);
+    ter = new Terrain(this);
+ 
+
+
+    try
+      {
+          calculateFFT();
+      }
+      catch(VisualException e)
+      {
+          e.printStackTrace();
+      }
     
   }
 
@@ -99,10 +123,15 @@ public class OurVisual extends Visual{
         partThree();
         break;
 
-      // case 4:
-      //   partFour();
-      //   break;
+      case 4:
+      background(255,192,203);
+        partFour();
+        break;
       
+      case 5:
+        partFive();
+        break;
+
       default:
         break;
     }
@@ -129,6 +158,9 @@ public class OurVisual extends Visual{
         case '4':
           mode = 4;
 
+        case '5':
+          mode = 5;
+
         default:
           break;
       }
@@ -141,14 +173,7 @@ public class OurVisual extends Visual{
 
   void partOne(){
 
-    // try
-    //   {
-    //       calculateFFT();
-    //   }
-    //   catch(VisualException e)
-    //   {
-    //       e.printStackTrace();
-    //   }
+    
 
     yasc.render();
     }
@@ -165,5 +190,18 @@ public class OurVisual extends Visual{
     
     mh.render();
 
+  }
+
+  void partFour(){
+
+    // color(RGB);
+
+    twerk.render();
+  }
+
+  void partFive(){
+    background(50);
+    ter.render();
+   
   }
 }

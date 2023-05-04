@@ -11,22 +11,11 @@ import c21333116.OurVisual;
 import c21333116.myHeart;
 import example.CubeVisual;
 import example.MyVisual;
-
+import example.twerking;
+import c21333116.*;
 public class Main
 {	
 
-	public void cube2()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new CubeVisual());		
-	}
-
-	public void startUI()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new MyVisual());		
-	}
-	
 
 	public void boysaliar()
 	{
@@ -41,7 +30,7 @@ public class Main
 
 		main.boysaliar();
 		//main.myheart();
-
+		// main.twerk();
 
 		//confetti JFrame code
 		JFrame frame = new JFrame("Confetti");

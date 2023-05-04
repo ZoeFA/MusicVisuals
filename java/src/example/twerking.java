@@ -1,96 +1,131 @@
 package example;
 
+import c21333116.OurVisual;
 import ie.tudublin.Visual;
 import ie.tudublin.VisualException;
 
-public class twerking extends Visual{
+public class twerking {
     
-    public void settings()
-    {
-        size(800, 800, P3D);
-        println("CWD: " + System.getProperty("user.dir"));
-        //fullScreen(P3D, SPAN);
-    }
+    OurVisual v;
 
-    public void keyPressed()
+	public twerking(OurVisual v)
+	{
+			this.v = v;
+			
+	}
+
+    public void render()
     {
-        if (key == ' ')
-        {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
-           
+        v.calculateAverageAmplitude();
+        
+        v.calculateFrequencyBands();
+       
+        
+        v.background(255,192,203);
+
+        v.noFill();
+
+        v.stroke(255,165,0);
+
+        v.strokeWeight(10);
+
+
+        int centerX = v.width / 2;
+
+        int centerY = v.height / 2;
+
+        float circleSize = 150;
+
+        float spacing = 70;
+
+      
+
+        while (circleSize < v.width) {//background circles/ellipses
+
+            int x = centerX;
+
+            int y = centerY;
+
+       
+
+            float aspectRatio = (float) (0.2 * (circleSize / 100.0)); // calculate aspect ratio based on circle size
+
+            v.ellipse(centerX, centerY, circleSize, circleSize * aspectRatio); // use dynamic aspect ratio
+
+      
+
+            circleSize += 90;
+
+            spacing += 80; // increase the distance between circles
+
         }
+
+
  
-    }
 
-    public void setup()
-    {
-        colorMode(HSB);
-        noCursor();
-       
-        setFrameSize(256);
+        //boy
 
-        startMinim();
-        loadAudio("boysaliar.mp3");
-        getAudioPlayer().play();
-        //startListening();
-       
-    }
+        v.calculateAverageAmplitude();
 
-    public void draw()
-    {
-        calculateAverageAmplitude();
-        try
-        {
-            calculateFFT();
-        }
-        catch(VisualException e)
-        {
-            e.printStackTrace();
-        }
-        calculateFrequencyBands();
-       
+            
+
+            v.calculateFrequencyBands();
+
+          
+            
+
         
-        
-        background(255);
-  
-  
-        ellipse(400,200,70,70);
-        float ellipse1Size = 20 + getSmoothedAmplitude() * 150;
-        float ellipse1Offset = 320 + getSmoothedAmplitude() * 50;
-        ellipse(370, ellipse1Offset, ellipse1Size, ellipse1Size);
-    
-        // Calculate the size and position of ellipse 2 based on the amplitude of the audio
-        float ellipse2Size = 20 + getSmoothedAmplitude() * 150;
-        float ellipse2Offset = 320 + getSmoothedAmplitude() * 50;
-        ellipse(430, ellipse2Offset, ellipse2Size, ellipse2Size);
-    
-        fill(255, 165, 0); // Orange fill color
-       
-        ellipse(400, 200, 70, 70);
-        
-    
-        rect(385, 235, 30, 60);
-        fill(0);
-        stroke(2);
-    
-        line(370, 350, 370, 390);
-        strokeWeight(3);
-        fill(0);
-    
-        line(379, 350, 379, 390);
-        strokeWeight(3);
-        fill(0);
-    
-        line(425, 350, 425, 390);
-        strokeWeight(3);
-        fill(0);
-    
-        line(434, 350, 434, 390);
-        strokeWeight(3);
-        fill(0);
-  
-  
+
+            v.fill(255, 165, 0); // Orange fill color
+
+            v.ellipse(centerX, 150, 70, 70);
+            
+
+           
+
+            v.fill(255);
+
+            v.rect(centerX - 50, 235, 100, 90);
+
+      
+
+            v.fill(255);
+
+            v.stroke(255, 165, 0);
+
+            v.strokeWeight(28);
+
+           
+
+            v.fill(255);
+            
+           
+            
+            v.line(900, 450, 900, 550);
+
+            v.fill(255);
+
+            v.line(1000, 450, 1000, 550);
+            //line(379, 450, 379, 500);
+
+            
+
+            //line(434, 350, 434, 390);
+
+      
+            //asscheecks
+
+            float ellipseSize = 50 + v.getSmoothedAmplitude() * 200;
+
+            float ellipseOffset = 400 + v.getSmoothedAmplitude() * 200;
+
+            v.fill(255);
+
+            v.ellipse(centerX - 45, ellipseOffset, ellipseSize, ellipseSize);
+
+      
+
+            v.ellipse(centerX + 30, ellipseOffset, ellipseSize, ellipseSize);
         
     }
 

@@ -19,20 +19,21 @@ public class myHeart {
 	}
 
 
-    float radius = 200;
+    float radius = 500;
 
     float smoothedBoxSize = 0;
 
     float rot = 0;
 
     float angle = 0;
-    float heartSize = 200;
+    float heartSize = 700;
 
 
 
 
     public void render()
     {
+        // v.applyColorMode();
         
         v.background(0);
         v.calculateAverageAmplitude();
@@ -52,8 +53,8 @@ public class myHeart {
         
 
         float amplitude = v.getSmoothedAmplitude();
-        float heartScale = 0.5f + amplitude * 0.5f;
-        heartSize = 20 * heartScale;
+        float heartScale = 0.5f + amplitude * 2.0f;
+        heartSize = 35 * heartScale;
 
         v.translate(v.width/2, v.height/2);
         
@@ -71,7 +72,7 @@ public class myHeart {
         }
             v.endShape(PApplet.CLOSE);
 
-            angle += v.getSmoothedAmplitude() * 0.01;
+            angle += v.getSmoothedAmplitude() * 0.5;
            
     }
     
