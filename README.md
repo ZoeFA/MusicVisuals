@@ -6,13 +6,6 @@ Name: Zoe Fabre-Anderson, Shahida Mohammed-Ahmed, Joanne Umeh, Naomi Togbe
 
 Student Number: D22125460, C21333116, D22126855, C21495372
 
-## Instructions
-- Fork this repository and use it a starter project for your assignment (DONE)
-- Create a new package named your student number and put all your code in this package. (DONE)
-- You should start by creating a subclass of ie.tudublin.Visual (done)
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
-
 
 # Description of the assignment
 Our assignment is the creation of an audio visualiser using Digital Audio Processing in Java. We mapped lines and shapes to the sound waves and frequency of the song Boy's A Liar Pt.2 by PinkPantheress ft. Ice Spice. We used a variety of visuals in order to capture the mood and energy of the song. The core theme of our visuals is the use of a pink and orange, aswell as hearts. The hearts are used to represent the lyrics of the song, which is about loving someone who you know is not dedicated to you. The colours pink and orange symbolise PinkPantheress and Ice Spce, respectfully.
@@ -41,7 +34,7 @@ blahblah
 
 
 # Visuals
-Joanne Visuals:
+**Joanne Visuals:**
 
 ![visual1](https://user-images.githubusercontent.com/123522743/236204085-2a4d5482-c31d-4d0a-8669-4c157f02e08f.png)
 
