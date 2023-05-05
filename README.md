@@ -23,7 +23,7 @@ Pressing key 5 shows the noise terrain
 
 
 ## What We are most proud of in the assignment
-We are proud of the YASC Heart-shaped ships, and the Terrain.
+We are proud of the YASC.java Heart-shaped ships. It took a long time to instantiate everything, as it was linked to two other files. It was also diffcult placing the ships in such a way that they would make the outline of a heart. We are proud aslso for the fact it was a visual which best represented the song. It was very fun running and playing with it, in order to fully understand how it works. 
 
 
 # Table of Work
@@ -34,25 +34,25 @@ We are proud of the YASC Heart-shaped ships, and the Terrain.
 | Zoe Fabre-Anderson | Keybind 2: A 3D cube which spins. Inside is a smaller heart, and text which says the title of the song. | It calculates the average amplitude, lerps it and then maps it to the cube. The cube pulses to the amplitude of the song |
 | Shahida Mohammed-Ahmed | Keybind 3: Beating heart with monochrome bars | The heart beats (expands) to the amplitude of the song |
 | Shahida Mohammed-Ahmed | Keybind 4: Twerking person (Ice Spice) | The two circles pulsating represent two asscheeks. It is to look like the stick figure is twerking |
-| Naomi Togbe | Keybind 5: Terrain and Planet | A noise map to act as a  moving terrain. A planet shape was to be added. The planet pulsed to the amplitude and rotated. |
+| Naomi Togbe | Keybind 5: Terrain and Planet | My “terrain” visual generates an infinite 3d terrain with the use of perlins noise and a 2d array.  In the draw method, I have used the noise function to generate random height values (stored in the array) resulting in a more natural and consistent look to the terrain. |
 
 
 # Visuals
-**Joanne Visuals:**
+###**Joanne Visuals:**
 ![visual1](https://user-images.githubusercontent.com/123522743/236204085-2a4d5482-c31d-4d0a-8669-4c157f02e08f.png)
 ![endvisual](https://user-images.githubusercontent.com/123522743/236352899-014b55d0-6761-4def-8d65-3eb08bb54530.png)
 
 
-**Zoe Visual:**
+###**Zoe Visual:**
 ![visual2](https://user-images.githubusercontent.com/123522743/236352923-1c00da69-1360-4660-92f7-8a28228cfaca.png)
 
 
-**Shahida Visuals:**
+###**Shahida Visuals:**
 ![visual4](https://user-images.githubusercontent.com/123522743/236352671-c68cf352-cdac-4e60-8d8b-7bcea882d5cd.png)
 ![visual3](https://user-images.githubusercontent.com/123522743/236352687-98935d04-ab65-4eba-ad23-a1fad030bd58.png)
 
 
-**Naomi Visuals:**
+###**Naomi Visuals:**
 ![visual5](https://user-images.githubusercontent.com/123522743/236352943-3fbc7fc7-ffa0-4724-b99b-15c971a0c1a1.png)
 
 How the Terrain and Planet should have looked:
