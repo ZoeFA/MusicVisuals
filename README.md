@@ -23,7 +23,7 @@ Pressing key 5 shows the noise terrain
 
 
 ## What We are most proud of in the assignment
-We are proud of the YASC.java Heart-shaped ships. It took a long time to instantiate everything, as it was linked to two other files. It was also diffcult placing the ships in such a way that they would make the outline of a heart. We are proud aslso for the fact it was a visual which best represented the song. It was very fun running and playing with it, in order to fully understand how it works. 
+We are proud of the YASC.java Heart-shaped ships. It took a long time to instantiate everything, as it was linked to two other files. It was also diffcult placing the ships in such a way that they would make the outline of a heart. We are also proud for the fact it was a visual which best represented the song (lost love). We really enjoyed running, testing and playing with it in order to improve it and fully understand how it works.
 
 
 # Table of Work
@@ -31,10 +31,11 @@ We are proud of the YASC.java Heart-shaped ships. It took a long time to instant
 |-----------|-----------|-----------|
 | Joanne Umeh | Keybind 1: YASC Heart-shaped ships and bullets | The Yasc java file is a file that a number of red hearts displayed on the screen. These hearts can move clockwise and anti-clockwise. When the space bar is entered the hearts begin to produce mini hearts that can be compared to bullets |
 | Joanne Umeh | Seperate terminal window: Confetti EndScreen | The Confetti java file uses a JFrame to produce mini rectangles that fall vertically on the screen. I used a random colour generator to make it look like confetti. I also added sliding text to the file in order for it to resemble a credit page. |
-| Zoe Fabre-Anderson | Keybind 2: A 3D cube which spins. Inside is a smaller heart, and text which says the title of the song. | It calculates the average amplitude, lerps it and then maps it to the cube. The cube pulses to the amplitude of the song |
-| Shahida Mohammed-Ahmed | Keybind 3: Beating heart with monochrome bars | The heart beats (expands) to the amplitude of the song |
-| Shahida Mohammed-Ahmed | Keybind 4: Twerking person (Ice Spice) | The two circles pulsating represent two asscheeks. It is to look like the stick figure is twerking |
-| Naomi Togbe | Keybind 5: Terrain and Planet | My “terrain” visual generates an infinite 3d terrain with the use of perlins noise and a 2d array.  In the draw method, I have used the noise function to generate random height values (stored in the array) resulting in a more natural and consistent look to the terrain. |
+| Zoe Fabre-Anderson | Keybind 2: A 3D cube which spins. Inside is a smaller 2D heart, and text which says the title of the song. | The cube calculates the average amplitude, lerps it and then maps it to the cube size. The heart and Text were static and did not read in any audio. This entire visual (cube, heart and text) rotated at an angle. Overall it was fairly simple to make. |
+| Shahida Mohammed-Ahmed | Keybind 3: Beating heart with monochrome bars | Rectangles and lines created a monochrome background. A heart shape in the centre reads in the amplitude of the song and maps it the size. The heart pulses as the song plays. We didn't intend to have the black bars go throught the heart, but over the course of the project, it grew on us. |
+| Shahida Mohammed-Ahmed | Keybind 4: Twerking person (Ice Spice) | Circles, ellipses and rectangles were used to create a stick-figure person. The two ellipses pulsating represent two asscheeks. It is to look like the stick figure is twerking. In future I would try to make it look more like a person, and have the shapes take up more of the negative space on the screen. |
+| Naomi Togbe | Keybind 5: Terrain | My “terrain” visual generates an infinite 3d terrain with the use of perlins noise and a 2d array.  In the draw method, I have used the noise function to generate random height values (stored in the array) resulting in a more natural and consistent look to the terrain. beginShape and endShape functions then draw the terrain through a series of connected triangles. |
+| Naomi Togbe | Would have linked to Keybind 6: A spinning planet with a ring | my “planet” visual generates a sphere with a ring around it. The planet rotates and the sphere pulsates according to the amplitude of the song which is smoothed by lerp. The ring is drawn using a torus method which i used as a torus is a geometrical shape that already looks like a ring and it has the ability to modify specific details eg radius and inner radius. However moving forward i’d try making a ring another way as it was a bit challenging. |
 
 
 # Visuals
