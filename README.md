@@ -11,6 +11,9 @@
 Our assignment is the creation of an audio visualiser using Digital Audio Processing in Java. We mapped lines and shapes to the sound waves and frequency of the song Boy's A Liar Pt.2 by PinkPantheress ft. Ice Spice. We used a variety of visuals in order to capture the mood and energy of the song. The core theme of our visuals is the use of a pink and orange, aswell as hearts. The hearts are used to represent the lyrics of the song, which is about loving someone who you know is not dedicated to you. The colours pink and orange symbolise PinkPantheress and Ice Spce, respectfully.
 
 We had a major roadblock to completing the assignment. Shahida had originally been the main repo that we all pushed to, but on Tuesday night it got corrupted. I (Zoe) then deleted the broken repo to refork the MusicVisuals repo again, so that we could try finish the project. This led to a major time crunch in the last couple days before the demo.
+Shahida's repo: https://github.com/c21333116/MusicVisuals
+Joanne's repo: https://github.com/Joanneumeh/MusicVisuals
+Naomi's repo: https://github.com/naomitogbe
 
 ## Instructions
 To play out visualiser: Press debug/run, then using the hot keys 1 - 6 you cans switch between different visuals. 
